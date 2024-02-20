@@ -1,8 +1,10 @@
 import { ContentEditPolicy, FieldSchema, FieldTypes } from "../Schema/base";
 import {
+  CustomerDetailsViewSchema,
   FilterLeadByCategoryViewSchema,
   FilterLeadsByInputViewSchema,
   LeadViewTableSchema,
+  PANAPIResponseSchema,
 } from "../Schema/views";
 
 export const LeadTableView: LeadViewTableSchema = {
@@ -103,6 +105,148 @@ export const FilterLeadByCategoryView: FilterLeadByCategoryViewSchema = {
       type: FieldTypes.DIV,
       label: "Approved",
       name: "approved",
+    },
+  ],
+};
+
+export const CustomerDetails: CustomerDetailsViewSchema = {
+  label: "Customer Details",
+  fields: [
+    {
+      id: "identity.name",
+      label: "Name",
+      editPolicy: ContentEditPolicy.LOOSE,
+      type: FieldTypes.INPUT,
+    },
+    {
+      id: "identity.mobile",
+      label: "Mobile number",
+      editPolicy: ContentEditPolicy.LOOSE,
+      type: FieldTypes.INPUT,
+    },
+    {
+      id: "identity.pan_number",
+      label: "PAN number",
+      editPolicy: ContentEditPolicy.LOOSE,
+      type: FieldTypes.INPUT,
+    },
+    {
+      id: "identity.email",
+      label: "Email",
+      editPolicy: ContentEditPolicy.LOOSE,
+      type: FieldTypes.INPUT,
+    },
+    {
+      id: "",
+      label: "Salary",
+      editPolicy: ContentEditPolicy.LOOSE,
+      type: FieldTypes.INPUT,
+    },
+    {
+      id: "",
+      label: "Applied loan",
+      editPolicy: ContentEditPolicy.LOOSE,
+      type: FieldTypes.INPUT,
+    },
+  ],
+};
+
+export const Employmentdeatils: CustomerDetailsViewSchema = {
+  label: "Customer Employment deatils",
+  fields: [
+    {
+      id: "employment.occupation",
+      label: "Occupation",
+      type: FieldTypes.INPUT,
+      editPolicy: ContentEditPolicy.LOOSE,
+    },
+    {
+      id: "employment.employer_type",
+      label: "Employer Type",
+      type: FieldTypes.INPUT,
+      editPolicy: ContentEditPolicy.LOOSE,
+    },
+    {
+      id: "employment.current_employer",
+      label: "Current employer",
+      type: FieldTypes.INPUT,
+      editPolicy: ContentEditPolicy.LOOSE,
+    },
+    {
+      id: "employment.desgination",
+      label: "desgination",
+      type: FieldTypes.INPUT,
+      editPolicy: ContentEditPolicy.LOOSE,
+    },
+    {
+      id: "employment.cwe",
+      label: "cwe",
+      type: FieldTypes.INPUT,
+      editPolicy: ContentEditPolicy.LOOSE,
+    },
+    {
+      id: "employment.official_mail_id",
+      label: "official mail id",
+      type: FieldTypes.INPUT,
+      editPolicy: ContentEditPolicy.LOOSE,
+    },
+    {
+      id: "employment.pincode",
+      label: "pincode",
+      type: FieldTypes.INPUT,
+      editPolicy: ContentEditPolicy.LOOSE,
+    },
+    {
+      id: "employment.city",
+      label: "city",
+      type: FieldTypes.INPUT,
+      editPolicy: ContentEditPolicy.LOOSE,
+    },
+  ],
+};
+
+export const PANAPIResponse: PANAPIResponseSchema = {
+  label: "PAN api response",
+  fields: [
+    {
+      id: "pan_api_res.pan_status",
+      label: "PAN Status",
+      type: FieldTypes.TEXT,
+    },
+    {
+      id: "pan_api_res.aadhaar_seeding",
+      label: "aadhaar seeding",
+      type: FieldTypes.TEXT,
+    },
+    {
+      id: "pan_api_res.pan_issuse_date",
+      label: "pan issuse date",
+      type: FieldTypes.TEXT,
+    },
+    {
+      id: "pan_api_res.last_update",
+      label: "last update",
+      type: FieldTypes.TEXT,
+    },
+    {
+      id: "pan_api_res.aadhaar_as_per_pan",
+      label: "aadhaar as per pan",
+      type: FieldTypes.TEXT,
+    },
+    {
+      id: "pan_api_res.mobile_number",
+      label: "mobile number",
+      type: FieldTypes.TEXT,
+    },
+    {
+      id: "pan_api_res.email",
+      label: "email",
+      type: FieldTypes.TEXT,
+    },
+    {
+      id: "pan_api_res.address_as_per_pan",
+      label: "address as per PAN",
+      type: FieldTypes.TEXT,
     },
   ],
 };

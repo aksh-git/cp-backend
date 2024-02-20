@@ -26,6 +26,7 @@ export enum FieldTypes {
   "DIV",
   "TEXT",
   "LINK",
+  "DATE",
 }
 
 export enum SectionTypes {

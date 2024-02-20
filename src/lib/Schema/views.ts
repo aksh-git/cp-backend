@@ -1,3 +1,4 @@
+import { CustomerDetails } from "../Views";
 import {
   BaseFieldSchema,
   BaseTableSchema,
@@ -37,4 +38,12 @@ interface CategoryFileds extends BaseFieldSchema {
 
 export interface FilterLeadByCategoryViewSchema extends WrapInfo {
   fields: CategoryFileds[];
+}
+
+export interface CustomerDetailsViewSchema extends WrapInfo {
+  fields: FieldSchema<true>[];
+}
+
+export interface PANAPIResponseSchema extends WrapInfo {
+  fields: FieldSchema<false>[];
 }
