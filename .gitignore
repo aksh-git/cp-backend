@@ -1,7 +1,3 @@
 # dirs
 node_modules
 dist 
-tests
-
-# files
-.env
